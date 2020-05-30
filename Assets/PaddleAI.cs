@@ -10,23 +10,12 @@ public class PaddleAI : MonoBehaviour, PaddleInterface
     float directionToMove = 0f;
     float height;
     public bool isRight = false;
-    Ball ball;
+    public Ball ball;
 
     // Start is called before the first frame update
     void Start()
     {
         height = transform.localScale.y;
-        ball = (Ball)GameObject.FindObjectOfType(typeof(Ball));
-    }
-
-    public void Init(string position)
-    {
-        Vector2 pos = Vector2.zero;
-        pos = new Vector2(GameManager.bottomLeft.x, 0);
-        pos += Vector2.right * transform.localScale.x;
-
-        transform.position = pos;
-        transform.name = "AI";
     }
 
     // Update is called once per frame

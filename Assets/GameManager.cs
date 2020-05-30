@@ -13,10 +13,6 @@ public class GameManager : MonoBehaviour
         Finished,
     }
 
-    public Ball ball;
-    public Paddle paddle;
-    public PaddleAI paddleAI;
-
     public TextMeshProUGUI leftScoreText;
     public TextMeshProUGUI rightScoreText;
     public Canvas scoresUnderlay;
@@ -35,8 +31,13 @@ public class GameManager : MonoBehaviour
     int leftScore = 0;
     int rightScore = 0;
 
-    PaddleInterface paddleLeft;
-    PaddleInterface paddleRight;
+    public Ball ball;
+    public Paddle paddleLeft;
+    public Joystick paddleLeftJoystick;
+    public Paddle paddleRight;
+    public Joystick paddleRightJoystick;
+
+    public PaddleAI paddleLeftAI;
     
     
     // Start is called before the first frame update
@@ -46,19 +47,19 @@ public class GameManager : MonoBehaviour
         bottomLeft = Camera.main.ScreenToWorldPoint(new Vector2(0, 0));
         topRight = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
 
-        ball = Instantiate(ball) as Ball;
-
-        paddleRight = Instantiate(paddle) as Paddle;
-        paddleRight.Init("Right");
-
         isMultiPlayer = PlayerPrefs.GetInt("numPlayers") == 2;
-        
         if (isMultiPlayer) {
-            paddleLeft = Instantiate(paddle) as Paddle;
-            paddleLeft.Init("Left");
-        } else {
-            paddleLeft = Instantiate(paddleAI) as PaddleAI;
-            paddleLeft.Init("Left");
+            // Remove the left paddle and joystick
+            paddleLeft.transform.gameObject.SetActive(false);
+            paddleLeftJoystick.transform.gameObject.SetActive(false);
+
+            // Since we only have one player, give them the full screen
+            Vector3 newJoystickPos = Camera.main.ScreenToWorldPoint(new Vector2(0, 0));
+            newJoystickPos.z = 0;
+            paddleRightJoystick.transform.position = newJoystickPos;
+
+            // Enable the AI
+            paddleLeftAI.transform.gameObject.SetActive(true);
         }
     }
 
@@ -111,8 +112,8 @@ public class GameManager : MonoBehaviour
     {
         pausedOverlay.transform.gameObject.SetActive(false);
         scoresUnderlay.transform.gameObject.SetActive(false);
-        paddleLeft.SetEnabled(false);
-        paddleRight.SetEnabled(false);
+        paddleLeft.transform.gameObject.SetActive(false);
+        paddleRight.transform.gameObject.SetActive(false);
         ball.transform.gameObject.SetActive(false);
         gameOver.transform.gameObject.SetActive(true);
 
