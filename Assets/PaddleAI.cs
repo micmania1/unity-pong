@@ -16,6 +16,10 @@ public class PaddleAI : MonoBehaviour, PaddleInterface
     void Start()
     {
         height = transform.localScale.y;
+
+        Vector2 pos = new Vector2(GameManager.bottomLeft.x, 0);
+        pos += Vector2.right * transform.localScale.x;
+        transform.position = pos;
     }
 
     // Update is called once per frame

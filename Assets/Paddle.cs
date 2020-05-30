@@ -18,8 +18,16 @@ public class Paddle : MonoBehaviour, PaddleInterface
         height = transform.localScale.y;
 
         if (isRight) {
+            Vector2 pos = new Vector2(GameManager.topRight.x, 0);
+            pos -= Vector2.right * transform.localScale.x;
+            transform.position = pos;
+
             input = "PaddleRight";
         } else {
+            Vector2 pos = new Vector2(GameManager.bottomLeft.x, 0);
+            pos += Vector2.right * transform.localScale.x;
+            transform.position = pos;
+
             input = "PaddleLeft";
         }
     }
