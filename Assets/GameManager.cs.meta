@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 1ab9a515614b5f6468c3c5e7ac665563
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ball: {fileID: 2546067521549718723, guid: 3dea4270487c2954787200ae28d9ca78, type: 3}
+  - paddle: {fileID: -2577625516046764320, guid: 0d81d9c14f2f2bb4f929165b13eece9f,
+      type: 3}
+  - paddleAI: {fileID: -7627456254148819140, guid: 30928156583b09a4e80c81a2b6b3be29,
+      type: 3}
+  - leftScoreText: {instanceID: 0}
+  - rightScoreText: {instanceID: 0}
+  - pausedText: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
