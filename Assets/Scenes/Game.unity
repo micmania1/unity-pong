@@ -403,7 +403,7 @@ MonoBehaviour:
   pausedOverlay: {fileID: 800163710}
   gameOver: {fileID: 555884850}
   winnerText: {fileID: 1522466628}
-  winningScore: 700
+  winningScore: 7
   ball: {fileID: 44080881}
   paddleLeft: {fileID: 494674376}
   paddleLeftJoystick: {fileID: 562012601}
@@ -668,6 +668,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4663361126537902567, guid: 30928156583b09a4e80c81a2b6b3be29,
+        type: 3}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 44080881}
     - target: {fileID: 4776146748348409641, guid: 30928156583b09a4e80c81a2b6b3be29,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1031,7 +1036,7 @@ GameObject:
   - component: {fileID: 562012602}
   - component: {fileID: 562012601}
   m_Layer: 5
-  m_Name: Dynamic Joystick
+  m_Name: LeftJoystick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1582,7 +1587,7 @@ GameObject:
   - component: {fileID: 1035005808}
   - component: {fileID: 1035005807}
   m_Layer: 5
-  m_Name: LeftJoystick
+  m_Name: LeftJoystickCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2964,7 +2969,7 @@ GameObject:
   - component: {fileID: 1762406048}
   - component: {fileID: 1762406047}
   m_Layer: 5
-  m_Name: Dynamic Joystick
+  m_Name: RightJoystick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2987,7 +2992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -281}
+  m_AnchoredPosition: {x: 1, y: -232}
   m_SizeDelta: {x: 960, y: 568}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1762406047
@@ -3060,7 +3065,7 @@ GameObject:
   - component: {fileID: 1997105815}
   - component: {fileID: 1997105814}
   m_Layer: 5
-  m_Name: RightJoystick
+  m_Name: RightJoystickCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

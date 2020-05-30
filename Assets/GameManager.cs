@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
         topRight = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
 
         isMultiPlayer = PlayerPrefs.GetInt("numPlayers") == 2;
-        if (isMultiPlayer) {
+        if (!isMultiPlayer) {
             // Remove the left paddle and joystick
             paddleLeft.transform.gameObject.SetActive(false);
             paddleLeftJoystick.transform.gameObject.SetActive(false);
