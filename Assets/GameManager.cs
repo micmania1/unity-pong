@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     bool isMultiPlayer = true;
 
-    public int winningScore = 1;
+    public int winningScore = 7;
     int leftScore = 0;
     int rightScore = 0;
 
@@ -113,7 +113,10 @@ public class GameManager : MonoBehaviour
         pausedOverlay.transform.gameObject.SetActive(false);
         scoresUnderlay.transform.gameObject.SetActive(false);
         paddleLeft.transform.gameObject.SetActive(false);
+        paddleLeftJoystick.transform.gameObject.SetActive(false);
         paddleRight.transform.gameObject.SetActive(false);
+        paddleRightJoystick.transform.gameObject.SetActive(false);
+        paddleLeftAI.transform.gameObject.SetActive(false);
         ball.transform.gameObject.SetActive(false);
         gameOver.transform.gameObject.SetActive(true);
 

@@ -403,7 +403,7 @@ MonoBehaviour:
   pausedOverlay: {fileID: 800163710}
   gameOver: {fileID: 555884850}
   winnerText: {fileID: 1522466628}
-  winningScore: 7
+  winningScore: 5
   ball: {fileID: 44080881}
   paddleLeft: {fileID: 494674376}
   paddleLeftJoystick: {fileID: 562012601}

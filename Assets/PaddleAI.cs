@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaddleAI : MonoBehaviour, PaddleInterface
+public class PaddleAI : MonoBehaviour
 {
     [SerializeField]
     float speed = 15f;
